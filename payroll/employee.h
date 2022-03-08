@@ -12,6 +12,16 @@
 class Employee {
 protected:
     bool invariant() const;
+    std::string employee_name;
+    SSN employee_ssn;
+    long double employee_pay;
+
+public:
+    virtual void final_print();
+    virtual void display();
+    virtual ~Employee();
+    Employee(std::string name, SSN ssn_ID, const std::string& pay);
+    virtual long double computePay();
 }; // class Employee
 
 #endif // EMPLOYEE_H
